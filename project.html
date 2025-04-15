@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fdfcf9;
+      color: #222;
+      margin: 0;
+      padding: 40px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+    }
+
+    iframe {
+      display: block;
+      margin: 30px auto;
+      border-radius: 10px;
+      max-width: 100%;
+      width: 720px;
+      height: 405px;
+    }
+
+    .description {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      line-height: 1.8;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 60px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: #444;
+      border: 1px solid #aaa;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .back-link:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>project: team pojects</h1>
+
+  <h2 style="font-size: 1.6rem; margin-bottom: 20px;">Video works- "I am a Fake narcissist."</h2>
+
+<section>
+  <div class="video-container">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/MBQB264Dw-o?si=YCCeOoTzvWw7ck06" 
+    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+  <p class="description">
+    We created this video as our final project for the Creativity and Visual Expression class. Before explaining the video itself, let me first share the inspiration behind it. Recently, on social media, we noticed the coexistence of two contrasting phenomena. On one hand, narcissism, where people express the desire to share their most perfect and beautiful selves with others, and on the other hand, self-loathing, where people dislike themselves and are overly conscious of how they are perceived by others. We found it intriguing how these opposing concepts could exist within the same society, and that thought sparked the idea for our video. <br><br>
+
+    Thus, we decided to use a mask as a medium and made narcissism the main theme of our video. In the video, the mask initially seems to serve as a tool for the protagonist to love themselves too much, perceiving themselves as more beautiful and decorated than their actual appearance. However, as the story progresses, it becomes clear that the protagonist is not seeing themselves honestly. Instead, they become aware of their flaws and use the mask to cover them, focusing on how others see them, revealing that they are just a persona adjusted to meet others' expectations. Additionally, by overlaying idealized images of eyes, nose, and lips on the protagonist's face, we wanted to portray the desire to conform to society’s standards of beauty and to project oneself into that ideal. We aimed to highlight the distorted self-love and, in the end, reveal that the protagonist, like anyone else, is not truly honest with themselves, yet still loves this version of themselves. <br><br>
+
+    Through this video, we hope to deliver a message of liberation from the consciousness of others to the audience. Although, realistically, it may be impossible in South Korean society not to be influenced by others' views, norms, and conventions, we wanted to encourage people to take a step outside of that box. By not being overly concerned with such constraints and by looking at themselves genuinely, we hope to inspire a healthier sense of self-love.
+  </p>
+
+  
+
+</body>
+<h2 style="margin-top: 60px;"> Hackathon Ux/Ui Design (Click to enlarge.)</h2>
+
+<div class="scroll-gallery">
+  <img src="h1.png" alt="h1" onclick="openModal(this.src)">
+  <img src="h2.png" alt="h2" onclick="openModal(this.src)">
+  <img src="h3.png" alt="h3" onclick="openModal(this.src)">
+  <img src="h4.png" alt="h4" onclick="openModal(this.src)">
+  <img src="h5.png" alt="h5" onclick="openModal(this.src)">
+  <img src="h6.png" alt="h6" onclick="openModal(this.src)">
+  <img src="h7.png" alt="h7" onclick="openModal(this.src)">
+  <img src="h8.png" alt="h8" onclick="openModal(this.src)">
+  <img src="h9.png" alt="h9" onclick="openModal(this.src)">
+  <img src="h10.png" alt="h10" onclick="openModal(this.src)">
+  <img src="h11.png" alt="h11" onclick="openModal(this.src)">
+  <img src="h12.png" alt="h12" onclick="openModal(this.src)">
+  <img src="h13.png" alt="h13" onclick="openModal(this.src)">
+</div>
+
+<!-- 모달 이미지 표시 -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img" />
+</div>
+
+<style>
+  .scroll-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .scroll-gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .scroll-gallery img:hover {
+    transform: scale(1.03);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+  }
+
+  .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: #ccc;
+  }
+</style>
+
+<script>
+  function openModal(src) {
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal-img').src = src;
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+
+<p class="gallery-description">
+NomaCircle is a responsive web service developed during a hackathon at Google Developer Groups Campus on Sogang.  
+I designed it to help the growing number of digital nomads find ideal workspaces and connect with like-minded individuals.  
+I participated in this project as the UX/UI designer, responsible for crafting the user flow and building the visual system.  
+I also ensured that every screen aligned with our core concept:  
+<strong>"The intersection of every digital nomad’s path."</strong>
+
+From the beginning, I focused on turning this idea into a meaningful visual experience.  
+The landing page sets the tone with a grain-textured gradient background and a custom-designed logo—an abstract “N” enclosed in an orbit and arrow—symbolizing movement, direction, and the cyclical nature of remote work.  
+This gives users the sense that they are not just entering a platform but starting a journey.
+<br><br>
+For the “Finding Place” feature, which allows users to locate cafés and workspaces near them, I designed a clean card-based UI.  
+Each card provides a quick overview with ratings, business hours, and images for easy comparison.  
+We used the Naver Maps API to implement the map interface, enabling location tracking and interactive markers.  
+I designed the layout so users could explore the map while smoothly interacting with the UI.  
+A glassmorphism-style overlay was used for the review modal to let users leave feedback without breaking their flow.
+<br><br>
+Beyond finding spaces, NomaCircle also functions as a community platform.  
+I created three types of networking boards—Position Board, Real Connect, and Anonymous Board—each supporting a different style of interaction.  
+The Position Board was visually categorized by roles like Backend, Frontend, Marketer, Creator, and Founder, with unique icons for quick recognition.  
+The interface encourages clean and collaborative communication, with features like comments and optional anonymity.
+<br><br>
+The overall design was inspired by the nomadic lifestyle.  
+I chose a deep navy and violet gradient as the main color scheme to convey calmness and focus, with a modern and forward-looking feel.  
+Clear sans-serif typography improves readability, while emojis and expressive icons help set the tone and bring warmth to the user experience.
+<br><br>
+Throughout the hackathon, I worked in **Figma** to create components, iterate on prototypes, and stay in sync with developers.  
+Even under time pressure, I focused on keeping the design consistent and emotionally resonant.  
+My goal wasn’t just to make something look good, but to create a system where function meets feeling—a space that feels thoughtful and connected.
+<br><br>
+This project reinforced my belief in the power of design to bridge the physical and digital.  
+With NomaCircle, I aimed to build more than a workspace finder.  
+I wanted to create a visual identity and experience that leaves a lasting mark on the journeys of remote workers around the world.
+
+  </p>
+  
+  <style>
+    .gallery-description {
+      max-width: 800px;
+      margin: 20px auto 60px auto;
+      text-align:left;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #444;
+    }
+  </style>
+
+  
+<!--<a href="index.html" class="back-link">← Back to Home</a>-->
+</html>
